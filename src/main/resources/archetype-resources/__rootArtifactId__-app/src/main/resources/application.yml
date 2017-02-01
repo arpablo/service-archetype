@@ -1,0 +1,16 @@
+info:
+  app:
+    name: ${service-name}-microservice
+    version: ${service-version}
+    
+spring:
+  application:
+    name: ${service-name}-microservice
+  jackson:
+    serialization:
+      indent-output: true    
+      
+logging:
+  level:
+    org.springframework: warn 
+    ${package}:  debug
