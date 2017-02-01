@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ${package}.api.${service-name}API;
+import ${package}.api.${service-name}Service;
 
 /**
  * The Implementaion class for Service ${service-name}
@@ -19,7 +20,7 @@ import ${package}.api.${service-name}API;
  */
 @RestController
 @RequestMapping(${service-name}API.SERVICE_URL)
-public class ${service-name}Impl {
+public class ${service-name}Impl implements ${service-name}Service {
 	
 	/**
 	 * Return the ID of the service
