@@ -7,7 +7,7 @@
 package ${package}.api;
 
 /**
- * Basic Runtime Exception throw by the service
+ * Basic Runtime Exception throw by the microservice ${service-name}
  * @author arp
  *
  */

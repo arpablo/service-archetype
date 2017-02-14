@@ -7,6 +7,8 @@
 package ${package}.api;
 
 /**
+ * This interface defines the methods provided by the
+ * microservice ${service-name}
  * @author arp
  *
  */

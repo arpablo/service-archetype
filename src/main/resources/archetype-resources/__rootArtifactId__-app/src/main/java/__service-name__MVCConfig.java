@@ -11,6 +11,7 @@ import org.springframework.web.servlet.config.annotation.ContentNegotiationConfi
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
+ * This class implements the MVC configuration for the application
  * @author arp
  *
  */

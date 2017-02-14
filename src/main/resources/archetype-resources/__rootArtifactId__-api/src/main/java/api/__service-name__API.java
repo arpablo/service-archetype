@@ -10,6 +10,7 @@ import feign.Headers;
 import feign.RequestLine;
 
 /**
+ * This interface defines the microservice ${service-name}
  * @author arp
  *
  */

@@ -18,6 +18,8 @@ import ${package}.api.${service-name}Service;
 
 
 /**
+ * This class impelements the Web MVC controller for
+ * the application
  * @author arp
  *
  */
