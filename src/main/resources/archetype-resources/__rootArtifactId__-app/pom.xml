@@ -83,6 +83,68 @@
 					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
+			
+			<!-- Prepare Docker build by filtering the resources -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/docker</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/docker</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>${spotify.docker.version}</version>
+				<configuration>
+					<imageName>${docker.registry.prefix}${docker.image.prefix}/${project.artifactId}</imageName>
+					<dockerDirectory>${project.basedir}/target/docker</dockerDirectory>
+					<imageTags>
+						<imageTag>${project.version}</imageTag>
+						<imageTag>latest</imageTag>
+					</imageTags>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.basedir}/src/main/docker</directory>
+							<exclude>Dockerfile</exclude>
+						</resource>
+					</resources>
+					<skipDockerBuild>false</skipDockerBuild>
+				</configuration>
+				<executions>
+					<execution>
+						<id>build-image</id>
+						<phase>package</phase>
+						<goals>
+							<goal>build</goal>
+						</goals>
+					</execution>
+				</executions>
+
+			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>

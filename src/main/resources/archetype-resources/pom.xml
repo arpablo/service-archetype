@@ -11,6 +11,11 @@
 	<packaging>pom</packaging>
 	<name>Maven artefact project</name>
 	
+	<properties>
+		<docker.registry.prefix></docker.registry.prefix>
+		<docker.image.prefix>arp</docker.image.prefix>
+	</properties>
+	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
