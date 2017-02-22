@@ -1,7 +1,12 @@
 info:
   app:
     name: ${service-name}-microservice
+    description: This is microservice ${service-name}
     version: ${service-version}
+
+# HTTP-Server settings
+server:
+  port: 8080
     
 spring:
   application:
@@ -9,8 +14,23 @@ spring:
   jackson:
     serialization:
       indent-output: true    
+  thymeleaf:
+    mode: HTML
       
 logging:
   level:
     org.springframework: warn 
     ${package}:  debug
+    
+# For management endpoints  
+management:
+  security:
+    enabled: false
+endpoints:
+  health:
+    sensitive: false
+
+# Flyway database migration
+flyway:
+  enabled: false
+  locations: classpath:db/flyway

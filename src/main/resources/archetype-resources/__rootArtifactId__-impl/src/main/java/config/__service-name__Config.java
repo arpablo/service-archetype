@@ -4,7 +4,7 @@
 /**
  * 
  */
-package ${package};
+package ${package}.config;
 
 
 import org.slf4j.Logger;
