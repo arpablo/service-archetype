@@ -56,7 +56,7 @@ whereby "service" is the value of parameter "service-name" and
 
 The parameter "service-name" is used as a displayable String that names the service. In most cases, it will start with an uppercase-letter, for example "Registry"
 
-Crate new service project
+Create new service project
 -------------------------
 
 ```
