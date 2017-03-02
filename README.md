@@ -32,8 +32,8 @@ Example
 ```
 http://localhost:8080/service/api/v1
 ```
-whereby "service" is the value of parameter <service-name> and
-"v1" ist the value of the parameter <service-version>
+whereby "service" is the value of parameter "service-name" and
+"v1" ist the value of the parameter "service-version"
 
 Crate new service project
 -------------------------
