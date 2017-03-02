@@ -2,6 +2,12 @@
 
 Maven archetype project for creating service projects.
 
+Prerequisites
+-------------
+Download and install the projects
+- arp-parent
+- arp-utils
+
 Installation
 ------------
 ```
