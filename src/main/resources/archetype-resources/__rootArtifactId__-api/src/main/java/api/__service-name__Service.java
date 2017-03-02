@@ -14,9 +14,5 @@ package ${package}.api;
  */
 public interface ${service-name}Service {
 
-	/**
-	 * Return the ID of the service
-	 */
-	String getServiceId();
 	
 }
