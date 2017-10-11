@@ -6,8 +6,7 @@
  */
 package ${package}.service;
 
-import de.arp.depp.api.${service-name}Service;
-
+import ${package}.api.${service-name}Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
